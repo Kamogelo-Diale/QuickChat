@@ -3,11 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package quickchat;
-import java.util.*;
+import java.util.Scanner;
 /**
  *
  * @author Student
  */
+class Login {
+    String Username;
+    String Password;
+    String Cellphone;
+    
+}
+
 public class QuickChat {
 
     /**
@@ -15,7 +22,7 @@ public class QuickChat {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String Name;
+        
     }
     
 }
