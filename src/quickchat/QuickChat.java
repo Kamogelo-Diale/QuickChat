@@ -9,12 +9,13 @@ import java.util.Scanner;
  * @author Student
  */
 class Login {
-    String Username;
-    String Password;
-    String Cellphone;
+    Scanner input = new Scanner (System.in);
+    String username;
+    String password;
+    String cellphone;
     
-    boolean checkUsername (String Username){
-     if (Username.length()== 5 && Username.contains("_")){
+    boolean checkUsername (String username){
+     if (username.length()== 5 && username.contains("_")){
          System.out.println("Username successfully captured");
      return true;
          
@@ -24,8 +25,8 @@ class Login {
          return false;
      }
     }
-    boolean checkPassword(String Password){
-        if (Password.length()==8 && Password.contains(".[!@#$%^&*].*") ){
+    boolean checkPassword(String password){
+        if (password.length()==8 && password.contains(".[!@#$%^&*].*") ){
          System.out.println("Password captured successfully");
          return true;
         }
@@ -34,8 +35,8 @@ class Login {
             return false;
         }
     }
-    boolean checkCellphone (String Cellphone){
-        if (Cellphone.length()==10 && Cellphone.contains("//^+27\\d(9)")){
+    boolean checkCellphone (String cellphone){
+        if (cellphone.length()==10 && cellphone.contains("//^+27\\d(9)")){
         System.out.println("Cellphone number successfully added");
         return true;
         }
@@ -44,7 +45,43 @@ class Login {
             return false;
         }
     }
+    void registerUser(String[]args){
+       System.out.println("\n======REGISTER ======");
+       
+       System.out.println("Enter Username");
+       username = input.nextLine();
+       
+       System.out.println("Enter Password");
+       password=input.nextLine();
+       
+       System.out.println("Enter Cellphone number");
+       cellphone=input.nextLine();
+       
+       if(checkUsername(username) && checkPassword(password) && checkCellphone(cellphone)){
+      System.out.println("Registration successful");   
+       }
+       else{
+           System.out.println("Registration failed");
+       }
+           
+    }
+     void loginUser(){
+        boolean success=false;
+        System.out.println("\n======REGISTER ======");
+       
+       System.out.println("Enter Username");
+       username = input.nextLine();
+       
+       System.out.println("Enter Password");
+       password=input.nextLine();
+       
+       System.out.println("Enter Cellphone number");
+       cellphone=input.nextLine();
+       }
+    
+        
 }
+    
 
 public class QuickChat {
 
