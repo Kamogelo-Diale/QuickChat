@@ -90,8 +90,8 @@ public class QuickChat {
         // TODO code application logic here
         Scanner enterMenu = new Scanner(System.in);
         
-        Login chatapp = new Login();
-        int choice;
+        QuickChat chatapp = new QuickChat();
+        String choice;
         
         
         do{
@@ -99,14 +99,14 @@ public class QuickChat {
            System.out.println("1.Register");
            System.out.println("2.Login");
            System.out.println("3.Exit");
-           choice = enterMenu.nextInt();
+           choice = enterMenu.nextLine();
            
            switch (choice){
                case 1:
-                   Login.registerUser();
+                   QuickChat.registerUser();
                    break;
                case 2:
-                   Login.loginUser();
+                   QuickChat.loginUser();
                    break;
                case 3:
                    break;

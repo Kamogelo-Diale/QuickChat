@@ -7,31 +7,18 @@ package testUnit;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+ 
 /**
  *
  * @author Student
  */
+ 
 public class testUnit {
+    @Test
+     public void testcheckUsername(){
+         
+     }
     
-    public testUnit() {
-    }
-    
-    
-    public static void setUpClass() {
-    }
-    
-    
-    public static void tearDownClass() {
-    }
-    
-    
-    public void setUp() {
-    }
-    
-  
-    public void tearDown() {
-    }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
