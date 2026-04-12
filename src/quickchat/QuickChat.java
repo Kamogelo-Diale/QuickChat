@@ -17,8 +17,7 @@ class Login {
     boolean checkUsername (String username){
      if (username.length()== 5 && username.contains("_")){
          System.out.println("Username successfully captured");
-     return true;
-         
+     return true;    
      } 
      else{
          System.out.println("Username is not correctly");
@@ -45,7 +44,7 @@ class Login {
             return false;
         }
     }
-    void registerUser(String[]args){
+    public String registerUser(){
        System.out.println("\n======REGISTER ======");
        
        System.out.println("Enter Username");
@@ -63,7 +62,7 @@ class Login {
        else{
            System.out.println("Registration failed");
        }
-           
+      return null;     
     }
      void loginUser(){
         boolean success=false;
@@ -78,8 +77,7 @@ class Login {
        System.out.println("Enter Cellphone number");
        cellphone=input.nextLine();
        }
-    
-        
+           
 }
     
 
@@ -90,7 +88,35 @@ public class QuickChat {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner enterMenu = new Scanner(System.in);
         
+        Login chatapp = new Login();
+        int choice;
+        
+        
+        do{
+            System.out.println("\n=======MENU=======");
+           System.out.println("1.Register");
+           System.out.println("2.Login");
+           System.out.println("3.Exit");
+           choice = enterMenu.nextInt();
+           
+           switch (choice){
+               case 1:
+                   Login.registerUser();
+                   break;
+               case 2:
+                   Login.loginUser();
+                   break;
+               case 3:
+                   break;
+               default:
+                   System.out.println("Invalid choice");
+           }  
+        }
+        while (choice!=3);{
+        enterMenu.close();
+    }
     }
     
 }
